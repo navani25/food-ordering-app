@@ -10,4 +10,5 @@ Users can select hotels (Veg or Non-Veg), choose food items, enter quantity, and
 
 ```bash
 gcc food_app.c -o food_app.exe
+<img width="1435" height="687" alt="Screenshot 2025-10-23 232635" src="https://github.com/user-attachments/assets/023e69cb-683e-4aaf-9155-6e95caf7652f" />
 
