@@ -23,7 +23,6 @@ int main()
             {
                 case 1:
                 {
-                    printf(" \n \t \t THANK YOU FOR SELECTING HOTEL MADHARAS \n");
 dishes:
                     printf(" \n \t \t SELECT YOUR FOOD \n");
                     printf(" 1.IDLI \n 2.DHOSA \n 3.PONGAL \n 4.POORI \n 5.PANEER TIKKA \t");
@@ -50,7 +49,7 @@ dishes:
                     break;
                 }
 
-                case 2: // VEGETARIAN HOT
+                case 2:
                 {
                     printf(" \n \t \t THANK YOU FOR SELECTING VEGETARIAN HOT \n");
 dishes_veg2:
@@ -74,7 +73,7 @@ dishes_veg2:
                     break;
                 }
 
-                case 3: // VEG RICE
+                case 3:
                 {
                     printf(" \n \t \t THANK YOU FOR SELECTING VEG RICE \n");
 dishes_veg3:
@@ -97,7 +96,7 @@ dishes_veg3:
                     break;
                 }
 
-                case 4: // CAFE SOUL
+                case 4:
                 {
                     printf(" \n \t \t THANK YOU FOR SELECTING CAFE SOUL \n");
 dishes_veg4:
@@ -120,7 +119,7 @@ dishes_veg4:
                     break;
                 }
 
-                case 5: // ONLY NATURE
+                case 5:
                 {
                     printf(" \n \t \t THANK YOU FOR SELECTING ONLY NATURE \n");
 dishes_veg5:
@@ -144,7 +143,7 @@ dishes_veg5:
                 }
 
                 default:
-                    printf(" Invalid VEG hotel selection");
+                    printf(" Invalid VEG hotel selection\n");
                     break;
             }
             break;
@@ -153,9 +152,9 @@ dishes_veg5:
         case 2: // NON-VEG HOTEL
         {
             int nonveg, food, qty, rep;
-            printf(" \n \t THANK YOU FOR SELECTING NON VEG HOTEL ");
+            printf(" \n \t THANK YOU FOR SELECTING NON VEG HOTEL \n");
             printf(" \n \t  SELECT YOUR FAVORITE HOTEL \n ");
-            printf(" \n 1.BIRIYANI CENTER \n 2.KARUNAS \n 3.BANANA LEAF \n 4.ACORD \n 5.FAST FOOD");
+            printf(" \n 1.BIRIYANI CENTER \n 2.KARUNAS \n 3.BANANA LEAF \n 4.ACORD \n 5.FAST FOOD\n");
             scanf("%d", &nonveg);
 
             switch(nonveg)
@@ -164,10 +163,9 @@ dishes_veg5:
                 {
 dishes_nonveg1:
                     printf(" \n \t THANK YOU FOR SELECTING BIRIYANI CENTER \n");
-                    printf(" \n \t SELECT YOUR FAVORITE FOOD \n");
-                    printf(" 1.NON VEG MEALS \n 2.CHICKEN 65 \n 3.CHICKEN BIRIYANI \n 4.MUTTON BIRIYANI \n 5.MUTTON CHOKA ");
+                    printf(" 1.NON VEG MEALS \n 2.CHICKEN 65 \n 3.CHICKEN BIRIYANI \n 4.MUTTON BIRIYANI \n 5.MUTTON CHOKA\n");
                     scanf("%d", &food);
-                    printf(" \n \t ENTER THE QUANTITY:- ");
+                    printf("Enter quantity: ");
                     scanf("%d", &qty);
 
                     switch(food)
@@ -179,8 +177,9 @@ dishes_nonveg1:
                         case 5: price = 95 * qty; break;
                         default: printf(" Invalid food selection"); price = 0; break;
                     }
+
                     total += price;
-                    printf("\n Select \n 0.Continue\n 1.Billing");
+                    printf("\n0.Continue 1.Billing\n");
                     scanf("%d", &rep);
                     if(rep == 0) goto dishes_nonveg1;
                     break;
@@ -190,10 +189,9 @@ dishes_nonveg1:
                 {
 dishes_nonveg2:
                     printf(" \n \t THANK YOU FOR SELECTING KARUNAS \n");
-                    printf(" \n \t SELECT YOUR FAVORITE FOOD \n");
-                    printf(" 1.SEA FOOD  \n 2.FISH BIRIYANI \n 3.FISH THOKKU \n 4.SEA MEALS  \n 5.CHICKEN FRIED RICE");
+                    printf(" 1.SEA FOOD \n 2.FISH BIRIYANI \n 3.FISH THOKKU \n 4.SEA MEALS \n 5.CHICKEN FRIED RICE\n");
                     scanf("%d", &food);
-                    printf(" \n \t ENTER THE QUANTITY:- ");
+                    printf("Enter quantity: ");
                     scanf("%d", &qty);
 
                     switch(food)
@@ -205,86 +203,105 @@ dishes_nonveg2:
                         case 5: price = 140 * qty; break;
                         default: printf(" Invalid food selection"); price = 0; break;
                     }
+
                     total += price;
-                    printf("\n Select \n 0.Continue\n 1.Billing");
+                    printf("\n0.Continue 1.Billing\n");
                     scanf("%d", &rep);
                     if(rep == 0) goto dishes_nonveg2;
                     break;
                 }
 
-case 3: // BANANA LEAF
-{
+                case 3: // BANANA LEAF
+                {
 dishes_nonveg3:
-    printf(" \n \t THANK YOU FOR SELECTING BANANA LEAF \n");
-    printf(" \n \t SELECT YOUR FAVORITE FOOD \n");
-    printf(" 1.CHICKEN NOODLES  \n 2.ALOO GOBI \n 3.MASALA COLA \n 4.ROSY COFFEE  \n 5.BLACK SEA");
-    scanf("%d", &food);
-    printf(" \n \t ENTER THE QUANTITY:- ");
-    scanf("%d", &qty);
+                    printf(" \n \t THANK YOU FOR SELECTING BANANA LEAF \n");
+                    printf(" 1.CHICKEN NOODLES \n 2.ALOO GOBI \n 3.MASALA COLA \n 4.ROSY COFFEE \n 5.BLACK SEA\n");
+                    scanf("%d", &food);
+                    printf("Enter quantity: ");
+                    scanf("%d", &qty);
 
-    switch(food)
-    {
-        case 1: price = 180 * qty; break;
-        case 2: price = 160 * qty; break;
-        case 3: price = 120 * qty; break;
-        case 4: price = 60 * qty; break;
-        case 5: price = 140 * qty; break;
-        default: printf(" Invalid food selection"); price = 0; break;
-    }
-    total += price;
-    printf("\n Select \n 0.Continue\n 1.Billing");
-    scanf("%d", &rep);
-    if(rep == 0) goto dishes_nonveg3;
-    break;
-}
-case 3: // BANANA LEAF
-{
-dishes_nonveg3:
-    printf(" \n \t THANK YOU FOR SELECTING BANANA LEAF \n");
-    printf(" \n \t SELECT YOUR FAVORITE FOOD \n");
-    printf(" 1.CHICKEN NOODLES  \n 2.ALOO GOBI \n 3.MASALA COLA \n 4.ROSY COFFEE  \n 5.BLACK SEA");
-    scanf("%d", &food);
-    printf(" \n \t ENTER THE QUANTITY:- ");
-    scanf("%d", &qty);
+                    switch(food)
+                    {
+                        case 1: price = 180 * qty; break;
+                        case 2: price = 160 * qty; break;
+                        case 3: price = 120 * qty; break;
+                        case 4: price = 60 * qty; break;
+                        case 5: price = 140 * qty; break;
+                        default: printf(" Invalid food selection"); price = 0; break;
+                    }
 
-    switch(food)
-    {
-        case 1: price = 180 * qty; break;
-        case 2: price = 160 * qty; break;
-        case 3: price = 120 * qty; break;
-        case 4: price = 60 * qty; break;
-        case 5: price = 140 * qty; break;
-        default: printf(" Invalid food selection"); price = 0; break;
-    }
-    total += price;
-    printf("\n Select \n 0.Continue\n 1.Billing");
-    scanf("%d", &rep);
-    if(rep == 0) goto dishes_nonveg3;
-    break;
-}
-case 5: // FAST FOOD
-{
+                    total += price;
+                    printf("\n0.Continue 1.Billing\n");
+                    scanf("%d", &rep);
+                    if(rep == 0) goto dishes_nonveg3;
+                    break;
+                }
+
+                case 4: // ACORD
+                {
+dishes_nonveg4:
+                    printf(" \n \t THANK YOU FOR SELECTING ACORD \n");
+                    printf(" 1.PIZZA \n 2.EGG ROLL \n 3.VEG ROLL \n 4.ULTIMATE CHICKEN \n 5.CHICKEN TIKKA\n");
+                    scanf("%d", &food);
+                    printf("Enter quantity: ");
+                    scanf("%d", &qty);
+
+                    switch(food)
+                    {
+                        case 1: price = 180 * qty; break;
+                        case 2: price = 90 * qty; break;
+                        case 3: price = 70 * qty; break;
+                        case 4: price = 200 * qty; break;
+                        case 5: price = 140 * qty; break;
+                        default: printf(" Invalid food selection"); price = 0; break;
+                    }
+
+                    total += price;
+                    printf("\n0.Continue 1.Billing\n");
+                    scanf("%d", &rep);
+                    if(rep == 0) goto dishes_nonveg4;
+                    break;
+                }
+
+                case 5: // FAST FOOD
+                {
 dishes_nonveg5:
-    printf(" \n \t THANK YOU FOR SELECTING FAST FOOD \n");
-    printf(" \n \t SELECT YOUR FAVORITE FOOD \n");
-    printf(" 1.SEA FOOD \n 2.SEA GRAVY \n 3.FISH CHOKKA \n 4.FISH MASALA  \n 5.MUTTON GRAVY");
-    scanf("%d", &food);
-    printf(" \n \t ENTER THE QUANTITY:- ");
-    scanf("%d", &qty);
+                    printf(" \n \t THANK YOU FOR SELECTING FAST FOOD \n");
+                    printf(" 1.SEA FOOD \n 2.SEA GRAVY \n 3.FISH CHOKKA \n 4.FISH MASALA \n 5.MUTTON GRAVY\n");
+                    scanf("%d", &food);
+                    printf("Enter quantity: ");
+                    scanf("%d", &qty);
 
-    switch(food)
-    {
-        case 1: price = 180 * qty; break;
-        case 2: price = 90 * qty; break;
-        case 3: price = 70 * qty; break;
-        case 4: price = 200 * qty; break;
-        case 5: price = 140 * qty; break;
-        default: printf(" Invalid food selection"); price = 0; break;
-    }
-    total += price;
-    printf("\n Select \n 0.Continue\n 1.Billing");
-    scanf("%d", &rep);
-    if(rep == 0) goto dishes_nonveg5;
-    break;
-}
+                    switch(food)
+                    {
+                        case 1: price = 180 * qty; break;
+                        case 2: price = 90 * qty; break;
+                        case 3: price = 70 * qty; break;
+                        case 4: price = 200 * qty; break;
+                        case 5: price = 140 * qty; break;
+                        default: printf(" Invalid food selection"); price = 0; break;
+                    }
 
+                    total += price;
+                    printf("\n0.Continue 1.Billing\n");
+                    scanf("%d", &rep);
+                    if(rep == 0) goto dishes_nonveg5;
+                    break;
+                }
+
+                default:
+                    printf("Invalid NON-VEG hotel selection\n");
+                    break;
+            } // end of switch(nonveg)
+            break;
+        }
+
+        default:
+            printf("Invalid hotel selection\n");
+            break;
+    } // end of switch(hotel)
+
+    printf("\nTotal Amount: %d\n", total);
+
+    return 0;
+} // end of main
